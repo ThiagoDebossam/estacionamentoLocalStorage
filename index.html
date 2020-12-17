@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Estacionamento"> 
+    <title>Estacionamento</title>
+    <link rel="stylesheet" href="_css/style.css">
+    <link rel="stylesheet" href="_css/reset.css">
+    <link rel="icon" href="_css/images/carro-ecologico.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+    <header class="cabecalho p-5">
+        <div class="text-center">
+            <h1 class="d-inline text-white" title="Estacionamento">Estacionamento</h1>
+        </div>
+    </header>
+    <main>
+        <!-- inicio do conteudo principal do site  -->
+        <section class="prinpal" id="principal">
+            <div class="container">
+                <section>
+                    <!-- inicio do formulario para adicionar veiculo -->
+                    <form id="formulario">
+                        <h2 id="adicionarVeiculo" class=" mt-5" title="Adicionar veículo">Adicionar veículo</h2>
+                        <div class="form-group">
+                            <input class="form-control" id="modelo" type="text" name="modelo_carro" placeholder="Digite o modelo do carro...">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" id="placa"  type="text" name="placa_carro" minlength=7 maxlength=7 placeholder="Digite a placa do carro...">
+                        </div>
+                        <div class="form-group form-check">
+                            <!-- checkbox para mundanca de mascara da placa  -->
+                            <input type="checkbox" checked class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label"  for="exampleCheck1">Placa MERCOSUL</label>
+                        </div>
+                        <!-- mostra mensagem caso os campos não sejam preenchidos -->
+                        <p class="text-danger font-weight-bold" id="mensagem"></p>
+                        <input title="Botão para adicionar veículo" id="btn-adicionar" class="mb-5 btn btn-success btn-lg btn-block" type="submit" name="adicionar" value="Adicionar">
+                    </form>
+                    <!-- final do formulario para adicionar veiculo -->
+                </section>
+                <!-- inicio do formulario de pesquisa -->
+                <div class="form-group mb-2">
+                    <h6>Digite a <span class="text-warning">placa </span> do veículo para pesquisar...</h6>
+                    <input class="form-control" type="search" name="pesquisa" id="buscar" placeholder="Digite a placa do veículo...">
+                </div>
+                <!-- final do formulario de pesquisa -->
+                <section class="tabela bg-white">
+                <!-- inicio da tabela de carros -->
+                    <table class="table table-hover table-bordered">
+                        <thead>
+                        <tr>
+                            <th scope="col">Modelo</th>
+                            <th scope="col">Placa</th>
+                            <th scope="col">Entrada</th>
+                            <th scope="col">Finalizar</th>
+                        </tr>
+                        </thead>
+                        <!-- listagem dos carros -->
+                        <tbody id="tabela"></tbody>
+                        <!-- fim da listagem dos carros -->
+                    </table>
+                <!-- final da tabela de carros -->
+                </section>  
+            </div>
+        </section>
+        <div id="modal-index" class="modal-container"></div>
+        <!-- final do conteudo principal do site  -->
+    </main>
+    <footer class="text-center mt-5 p-5 bg-dark text-white">
+        <p>Este site foi desenvolvido por Thiago Debossam Nogueira.</p>
+    </footer>
+    <script src="src/controllers/CarroController.js"></script>
+    <script src="src/models/Carro.js"></script>
+    <script src="src/Utils/Hora.js"></script>
+    <script src="src/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

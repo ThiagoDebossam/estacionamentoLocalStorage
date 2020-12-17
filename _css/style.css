@@ -1,0 +1,61 @@
+.cabecalho {
+    background: black;
+    font-family: 'Sansita Swashed', cursive;
+}
+
+.finalizar:hover{
+    cursor: pointer;
+}
+
+.link{
+    color:white;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: white;
+    text-decoration-line: none;
+
+}
+
+.principal{
+    margin: 0 auto;
+    width: 40%;
+}
+
+.rodape{
+    margin-top: 200px;;
+}
+
+.tabela{
+    margin-bottom: 200px;
+}
+
+/* modal  */
+.modal-container{
+    align-items: center;
+    background: rgba(0,0,0, 0.5);
+    display: none;
+    height: 100vh;
+    justify-content: center;
+    left: 0px;
+    position: fixed;
+    top: 0px;
+    width: 100vw;
+    z-index: 2000;
+}
+
+.modal-container.mostrar-modal{
+    display: flex;
+}
+
+.index-modal{
+    background-color: white;
+    border: 1px solid blue;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.index-modal p {
+    font-size: 1.5em;
+}
